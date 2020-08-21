@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Noise Shift</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style type="text/css">
+    body{
+        padding:0;
+        margin:0;
+        position: relative;
+    }
+
+    .main{
+        height: 100vh;
+    }
+
+    #canvas{
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    #canvas canvas{
+        height: 100%!important;
+        width: 100%!important;
+    }
+
+    .nav .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .btn{
+        width: 100px;
+        height: 50px;
+        background: black;
+        border-radius: 0;
+        color: white;
+    }
+
+    .btn:hover{
+        color: #C1F7FD;
+    }
+
+    .footer{
+        bottom: -50px;
+        height: 50px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    </style>    
+</head>
+<body>
+
+<div class="main">
+    <div id="container"></div>
+</div>
+
+
+<script src='https://cdn.jsdelivr.net/npm/three@0.101.1/build/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/three-pp.js'></script>
+<script src="https://rawgit.com/jwagner/simplex-noise.js/master/simplex-noise.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script type="module" src="three.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
